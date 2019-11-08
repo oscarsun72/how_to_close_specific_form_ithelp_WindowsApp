@@ -22,4 +22,15 @@
         Dim frm1 = Application.OpenForms("Form1")
         frm1.Visible = True
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim opnfrm = Application.OpenForms
+        For Each f In opnfrm
+            If f.name <> Me.Name Then
+                f.Close()
+                If opnfrm.Count = 1 Then Exit For
+            End If
+        Next f
+        Me.Close()
+    End Sub
 End Class
