@@ -33,5 +33,6 @@
         Next f
         Me.Close()
         'Application.Exit()'https://www.blueshop.com.tw/board/show.asp?subcde=BRD20190106120323AS3&fumcde=FUM20050124191756KKC
+        'https://dotblogs.com.tw/ricochen/2010/01/18/13066
     End Sub
 End Class
