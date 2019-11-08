@@ -8,6 +8,17 @@
     End Sub
 
     Private Sub Form2_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        If Application.OpenForms.Count > 0 Then
+            For Each f In Application.OpenForms
+                If f.name = "Form1" Then
+                    Dim frm1 = Application.OpenForms("Form1")
+                    frm1.Visible = True
+                End If
+            Next f
+        End If
+    End Sub
+
+    Private Sub Form2_DoubleClick(sender As Object, e As EventArgs) Handles MyBase.DoubleClick
         Dim frm1 = Application.OpenForms("Form1")
         frm1.Visible = True
     End Sub
